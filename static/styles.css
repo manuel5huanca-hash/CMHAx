@@ -1,0 +1,410 @@
+/*Parte superior*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff !important;
+  color: #000000;
+  height: 100px; /* 👈 define una altura fija */
+  padding: 0 40px; /* 👈 elimina el padding vertical */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.logo img {
+  height: 100px; /* 👈 ajusta la altura del logo */
+  width: auto;  /* 👈 mantiene proporción horizontal */
+  margin-right: 20px; /* separa del botón Categorías */
+  object-fit: contain; /* evita deformaciones */
+  vertical-align: middle; /* lo alinea con el texto y el botón */
+  border-radius: 50px;
+}
+
+/* Botón Categorías */
+.categorias {
+  background-color: #1d3ebc; /* azul más suave */
+  color: white;
+  border: none;
+  padding: 8px 15px; /* espacio interno equilibrado */
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* espacio entre el ícono y el texto */
+  width: auto; /* se adapta al texto */
+  height: auto; /* 👈 elimina la altura fija */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* sombra suave opcional */
+}
+
+/* Buscador */
+.buscador {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px 12px;
+  width: 600px; /* ajusta según tu diseño */
+}
+
+.icono-lupa {
+  font-size: 20px;
+  color: #c5c5c5; /* 👈 color gris suave */
+  margin-right: 8px;
+}
+
+.buscador input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  flex: 1;
+}
+
+/* Usuario y carrito */
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding-right: 60px; /* 👈 mueve todo el bloque más hacia adentro */
+  position: relative;
+  top: 2px; /* 👈 ajusta ligeramente la altura */
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding-right: 60px;
+}
+
+.login, .carrito {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Círculo detrás del ícono */
+.icono-circulo {
+  background-color: #f2f7ff; /* 👈 azul muy suave */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-usuario {
+  width: 40px;
+  height: 40px;
+  filter: none;
+}
+.icono-carrito {
+  width: 50px;
+  height: 50px;
+  filter: none;
+}
+
+/* Texto de bienvenida */
+.texto-login {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.bienvenido {
+  color: #6b6b6b;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.iniciar {
+  color: #004aad;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Carrito */
+.texto-carrito {
+  color: #8c8c8c;
+  font-weight: 600;
+}
+/*Fin*/
+
+/* Banner komi*/
+.banner {
+  background-image: url("fondo_3.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  padding: 250px 80px;
+  border-top: 80px solid #4b0082;
+  margin: 0;
+  border-bottom: 3px solid #710082;
+  position: relative;
+}
+/* Gradiente inferior para el banner */
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* altura del difuminado */
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+  z-index: 2;
+}
+
+/* Contenedor del texto */
+.precio {
+  position: absolute;
+  top: 65%; 
+  right: 2%;
+  background-color: #ff0000; /* 🔴 rojo intenso */
+  color: #fff;
+  padding: 15px 0px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Precio principal */
+.actual {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Texto “PRECIO” */
+.precio-texto {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+}
+
+/* Precio anterior */
+.antes {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000; /* negro para contraste */
+  background-color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 8px;
+}
+/*fin*/
+
+/*@2026 tu empresa*/
+footer {
+  background-color: #0b0b3b;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+/*fin*/
+
+/* iniciar sesion */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mensajes {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.mensajes .success { background-color: #00ffea; color: #0b0b3b; }
+.mensajes .danger { background-color: #ca0c0c; color: white; }
+/*fin*/
+
+/* Bloqueo de inicio de sesion */
+.bloqueo-container {
+  max-width: 500px;
+  margin: 150px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.bloqueo-container h1 {
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+.boton-bloqueo {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #b30000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.boton-bloqueo:hover {
+  background-color: #800000;
+}
+/*fin*/
+
+/*fondo del inicio de sesion komisan*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,rgba(55, 54, 54, 0.229), rgba(19, 18, 18, 0.144)),
+              url("fondo_login5.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  backdrop-filter: brightness(0.8);
+}
+/*fin*/
+
+/* Centrar el cuadro (cuadro del inicio de sesion) */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -70%);
+  width: 500px;
+  padding: 70px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.67);
+  backdrop-filter: blur(10px);
+  color: #0b0b0b;
+  text-align: left;
+}
+
+/* Título */
+.login-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Etiquetas y campos */
+.login-container label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.557);
+  color: #141313;
+  outline: none;
+  font-size: 14px;
+}
+.login-container input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+/* Botón “Ingresar” */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff6600; /* 👈 color igual que el texto */
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+/*ilumina el ingresar*/
+.login-container button:hover {
+  background-color: #ff3300;
+}
+/* Enlace “¿Olvidaste tu contraseña?” */
+.login-container a {
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #000000;
+  text-decoration: underline;
+  text-align: center;
+}
+/*fin*/
+
+/*Catalogo de productos */
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b0b3b;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card button:hover {
+  background-color: #6a0dad;
+}
