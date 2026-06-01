@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda de Cómputo</title>
+
+  <!-- Aquí enlazamos el CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='Logo.png') }}" alt="Logo Tienda">
+    </div>
+    <button class="categorias">☰ Categorías</button>
+    <div class="buscador">
+      <span class="icono-lupa">🔍</span>
+      <input type ="text" placeholder="Buscar productos, marcas y más...">
+    </div>
+
+    <div class="usuario">
+  <div class="login">
+    <div class="icono-circulo">
+      <img src="{{ url_for('static', filename='usuario.png') }}" alt="Usuario" class="icono-usuario">
+    </div>
+    <div class="texto-login">
+      <span class="bienvenido">BIENVENIDO</span>
+      <a href="{{ url_for('login') }}" class="iniciar">Iniciar Sesión</a>
+    </div>
+  </div>
+
+  <div class="carrito">
+    <div class="icono-circulo">
+      <img src="{{ url_for('static', filename='carrito.png') }}" alt="Carrito" class="icono-carrito">
+    </div>
+    <span class="texto-carrito">Carrito</span>
+  </div>
+</div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-contenido">
+      <div class="precio">
+        <span class="descuento">Descuento - S/150.00</span>
+        <span class="actual">S/1,050.30</span>
+        <span class="antes">Antes: S/1,200.30</span>
+      </div>
+    </div>
+  </section>
+
+<!-- Catálogo de Productos -->
+ <section class="categorias">
+  <div class="grid">
+    {% for producto in productos %}
+      <div class="card">
+        <img src="{{ url_for('static', filename=producto.imagen) }}" alt="{{ producto.nombre }}">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.precio }}</p>
+        <button>Ver todo</button>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Tu Empresa — Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
